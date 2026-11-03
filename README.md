@@ -12,16 +12,20 @@ for architecture, code review, testing and the systems I ship.
 
 ## Professional Engineering Impact
 
-My commercial work is grounded in **PHP/Laravel backend engineering**, with
-responsibility extending beyond individual features:
-
-- **Backend delivery:** building and maintaining production applications, REST APIs
-  and database-backed services for business workflows.
-- **Payment integration:** implementing payment integrations and fintech backends,
-  drawing on experience with databases, asynchronous processing and distributed services.
-- **Architecture and ownership:** taking systems from architecture and implementation
-  through deployment and ongoing maintenance, with testing and production infrastructure
-  treated as part of the engineering work.
+- **Fintech performance:** made trading CRM pages **30x faster** and critical APIs
+  **10x faster** through PHP backend, SQL query and index optimization.
+- **High-load Laravel systems:** designed and implemented SSO for an iGaming/payments
+  platform with **15M+ users**; reduced critical business flow latency from
+  **1–2 minutes to ~3 seconds** through SQL and backend optimization.
+- **Payments and transactional processing:** built queued bonus payouts for
+  **up to 100K users per run**; contributed to crypto, bank-transfer and payment
+  aggregator integrations with webhooks and asynchronous processing.
+- **Technical leadership:** managed **3 developers**, owning CRM performance and
+  technical decisions; led a **PHP 5 → PHP 7** migration with **zero critical
+  production incidents**.
+- **Release engineering:** led **5 QA engineers** and automated build verification
+  in **15 minutes**, replacing **~7 working days of manual testing per engineer**;
+  integrated automated tests into CI.
 
 The public projects below demonstrate engineering approaches and newer independent
 work; they are not presented as the source code of confidential commercial systems.
