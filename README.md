@@ -115,9 +115,6 @@ These are focused engineering samples, not claims about commercial deployments.
 - **[QAProvider](https://qaprovider.com)** — live crowdtesting platform connecting
   product teams with testers on real devices. Product website; source is not
   published in this portfolio.
-- **[Idlecoin](https://idlecoin.pro)** — independently built cryptocurrency trading
-  automation product with a public website. Private implementation; no trading
-  performance or financial results are claimed here.
 - **[Route Spoofer](https://play.google.com/store/apps/details?id=com.routespoofer.app)** —
   published Android app, with [public source](https://github.com/Gegirhasut/route-spoofer).
 
