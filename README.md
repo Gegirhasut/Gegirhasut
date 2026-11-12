@@ -41,9 +41,8 @@ Each match runs in its own actor goroutine; a binary delta protocol cut
 server-to-client traffic 18× against JSON. Matches survive disconnects, restarts and
 node crashes: in a three-node cluster sharing Redis, with Lua-fenced match ownership
 and shared matchmaking, a node killed under load had all 188 of its players back in
-their matches on other nodes. The code went through repeated rounds of independent,
-AI-assisted review, and every confirmed defect has a regression test that fails on the
-code before the fix.
+their matches on other nodes. Every defect found has a regression test that fails on
+the code before the fix.
 [Verified CI](https://github.com/Gegirhasut/sabostack-go-server/actions/workflows/ci.yml)
 runs 100+ tests under the race detector, the Redis tests against both miniredis and a
 real Redis, fuzzing, static analysis and vulnerability scanning. **Load figures come from a single
