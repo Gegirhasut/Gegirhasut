@@ -32,6 +32,22 @@ work; they are not presented as the source code of confidential commercial syste
 
 ## Selected Engineering Work
 
+### [SaboStack Go Server](https://github.com/Gegirhasut/sabostack-go-server)
+**Real-time multiplayer backend · Go, WebSocket, Redis, Docker**
+
+An authoritative server for real-time 1v1 matches of SaboStack, my PvP game published
+on [Google Play](https://play.google.com/store/apps/details?id=com.sabostack.app).
+Each match runs in its own actor goroutine; a binary delta protocol cut
+server-to-client traffic 18× against JSON. Matches survive disconnects, restarts and
+node crashes: in a three-node cluster sharing Redis, with Lua-fenced match ownership
+and shared matchmaking, a node killed under load had all 188 of its players back in
+their matches on other nodes. Every issue from six rounds of external code review has
+a regression test that fails on the code before the fix.
+[Verified CI](https://github.com/Gegirhasut/sabostack-go-server/actions/runs/43326953907)
+runs 103 tests under the race detector, the Redis tests against both miniredis and a
+real Redis, fuzzing and vulnerability scanning. **Load figures come from a single
+laptop, not production traffic.**
+
 ### [Solana Card Escrow](https://github.com/Gegirhasut/solana-card-escrow)
 **Payment lifecycle and reconciliation · Rust/Anchor, Python/FastAPI, PostgreSQL, Redis**
 
@@ -107,8 +123,9 @@ These are focused engineering samples, not claims about commercial deployments.
 
 - **AI and automation:** Python, FastAPI, LLM APIs, document ingestion, vector retrieval,
   evaluation and AI-assisted development.
-- **Systems and cross-platform development:** Rust, WebAssembly, Solana/Anchor,
-  Kotlin/Android and Capacitor; independent mobile games and software products.
+- **Systems and cross-platform development:** Go, Rust, WebAssembly, Solana/Anchor,
+  Kotlin/Android and Capacitor; real-time game servers, independent mobile games and
+  software products.
 
 ## Independent Products
 
