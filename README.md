@@ -98,22 +98,20 @@ These are focused engineering samples, not claims about commercial deployments.
 
 ## Core Technical Expertise
 
-**Professional foundation**
-
-- **Backend and architecture:** PHP 8.x, Laravel, Symfony, REST APIs, database design
-  and backend service architecture.
-- **Fintech and distributed systems:** payment integrations, event-driven workflows,
-  asynchronous processing, MySQL, PostgreSQL, Redis and RabbitMQ.
-- **Infrastructure and reliability:** Linux, Docker, CI/CD, automated testing,
-  deployment and ongoing production maintenance.
-
-**Newer independent engineering work**
-
-- **AI and automation:** Python, FastAPI, LLM APIs, document ingestion, vector retrieval,
-  evaluation and AI-assisted development.
-- **Systems and cross-platform development:** Go, Rust, WebAssembly, Solana/Anchor,
-  Kotlin/Android and Capacitor; real-time game servers, independent mobile games and
-  software products.
+- **Languages:** Go, PHP 8.x, Python, Rust, Kotlin, TypeScript/JavaScript, SQL.
+- **Backend and APIs:** Laravel, Symfony, FastAPI; REST and WebSocket APIs, database
+  design, service architecture.
+- **Real-time and multiplayer:** authoritative game servers, WebSocket and binary delta
+  protocols, the actor model, reconnection and crash recovery, multi-node clusters with
+  failover and shared matchmaking.
+- **Fintech and distributed systems:** payment integrations, idempotency, transactional
+  outbox, event-driven and asynchronous processing; PostgreSQL, MySQL, Redis, RabbitMQ.
+- **AI backends:** LLM APIs, document ingestion, vector retrieval (Qdrant), evaluation
+  and observability.
+- **Mobile, games and cross-platform:** Android (Kotlin), Capacitor, WebAssembly,
+  Solana/Anchor; games and apps published on Google Play.
+- **Infrastructure and quality:** Linux, Docker, CI/CD with GitHub Actions, load
+  testing, race detection, fuzzing, profiling, production operations.
 
 ## Independent Products
 
