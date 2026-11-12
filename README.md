@@ -41,11 +41,12 @@ Each match runs in its own actor goroutine; a binary delta protocol cut
 server-to-client traffic 18× against JSON. Matches survive disconnects, restarts and
 node crashes: in a three-node cluster sharing Redis, with Lua-fenced match ownership
 and shared matchmaking, a node killed under load had all 188 of its players back in
-their matches on other nodes. Every issue from six rounds of external code review has
-a regression test that fails on the code before the fix.
-[Verified CI](https://github.com/Gegirhasut/sabostack-go-server/actions/runs/43326953907)
-runs 103 tests under the race detector, the Redis tests against both miniredis and a
-real Redis, fuzzing and vulnerability scanning. **Load figures come from a single
+their matches on other nodes. The code went through repeated rounds of independent,
+AI-assisted review, and every confirmed defect has a regression test that fails on the
+code before the fix.
+[Verified CI](https://github.com/Gegirhasut/sabostack-go-server/actions/workflows/ci.yml)
+runs 100+ tests under the race detector, the Redis tests against both miniredis and a
+real Redis, fuzzing, static analysis and vulnerability scanning. **Load figures come from a single
 laptop, not production traffic.**
 
 ### [Solana Card Escrow](https://github.com/Gegirhasut/solana-card-escrow)
@@ -67,24 +68,6 @@ broker outages, ambiguous gateway outcomes, retry exhaustion and recovery of
 stalled payments. [Verified CI](https://github.com/Gegirhasut/paystream/actions/runs/38683774498)
 passed 195 tests with real PostgreSQL and RabbitMQ. **The payment gateway is simulated.**
 
-### [Notification Service](https://github.com/Gegirhasut/notification-service)
-**Reliable message processing · Python/FastAPI, PostgreSQL, RabbitMQ, Redis**
-
-An SMS/email dispatch reference service with priority queues, persistent status
-history, request deduplication, bounded retries and a recovery sweeper. I separated
-API, dispatch and receipt handling, with integration tests against real infrastructure.
-**Providers are mocked; durable end-to-end duplicate prevention requires
-provider-side idempotency.**
-
-### [RAG Agents](https://github.com/Gegirhasut/rag-agents)
-**Document retrieval and AI backends · Python/FastAPI, Celery, Qdrant, PostgreSQL**
-
-An experimental document-question-answering system with structural chunking,
-background ingestion, isolated knowledge bases and streamed answers with source
-references. I built the retrieval pipeline, evaluation harness and observability
-to inspect retrieval quality, failure recovery and model behavior. **Independent
-portfolio project; the README distinguishes implemented work from the roadmap.**
-
 ### [roughroute](https://github.com/Gegirhasut/roughroute)
 **Offline routing · Rust, OpenStreetMap, WebAssembly, UniFFI/Kotlin**
 
@@ -101,6 +84,12 @@ foreground-service playback, a separately tested route engine and the bridge fro
 the route editor to Android mock-location providers. **Publicly released on
 [Google Play](https://play.google.com/store/apps/details?id=com.routespoofer.app),
 with MIT-licensed source.**
+
+**Also:** [Notification Service](https://github.com/Gegirhasut/notification-service)
+(SMS/email dispatch with priority queues, deduplication, bounded retries and a recovery
+sweeper; Python, RabbitMQ, PostgreSQL) and [RAG Agents](https://github.com/Gegirhasut/rag-agents)
+(experimental document question answering with background ingestion, retrieval evaluation
+and observability; Python, Celery, Qdrant).
 
 **Additional PHP work:** [Laravel redirect guard](https://github.com/Gegirhasut/laravel-post-login-redirect-guard)
 explores safe post-login redirects across user sessions;
@@ -132,6 +121,9 @@ These are focused engineering samples, not claims about commercial deployments.
 - **[QAProvider](https://qaprovider.com)** — live crowdtesting platform connecting
   product teams with testers on real devices. Product website; source is not
   published in this portfolio.
+- **[SaboStack](https://play.google.com/store/apps/details?id=com.sabostack.app)** — real-time
+  PvP game for browser and Android, published on Google Play with 5K+ downloads; its
+  [game server](https://github.com/Gegirhasut/sabostack-go-server) is the first project above.
 - **[Route Spoofer](https://play.google.com/store/apps/details?id=com.routespoofer.app)** —
   published Android app, with [public source](https://github.com/Gegirhasut/route-spoofer).
 
