@@ -6,8 +6,8 @@ applications. My deepest commercial expertise is **PHP/Laravel**, APIs, database
 and distributed services. I build complete products, from architecture and
 implementation through deployment and maintenance.
 
-My independent work extends that foundation into Python AI backends, Rust and
-Android. AI coding agents are part of my development workflow; I remain responsible
+My independent work extends that foundation into real-time multiplayer game servers in
+Go, Python AI backends, Rust and Android. AI coding agents are part of my development workflow; I remain responsible
 for architecture, code review, testing and the systems I ship.
 
 ## Professional Engineering Impact
